@@ -1,0 +1,17 @@
+﻿@model Comic
+
+@if (Model != null)
+{
+    <h1>Details Comic</h1>
+    <td><a asp-controller="Comics" asp-action="Index" class="btn btn-info">Back to List</a></td>
+    <ul class="list-group">
+        <li class="list-group-item">ID Comic: @Model.IdComic</li>
+        <li class="list-group-item">Nombre: @Model.Nombre</li>
+        <li class="list-group-item">Imagen: <img src="@Model.Imagen" alt="Imagen Comic" height="100px" width="100px" /></li>
+        <li class="list-group-item">Descripcion: @Model.Descripcion</li>
+    </ul>
+}
+else
+{
+    <h3>No hay details</h3>
+}
